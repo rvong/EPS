@@ -1,7 +1,5 @@
 #Informatics 102
-
->Book Title:  Exercises in Programming Style
->Author: Crista Lopes
+*Exercises in Programming Style*
 
 #Task
 Conform to the specified style. See the style's constraints in the text.
@@ -46,9 +44,10 @@ Ends up being like left-to-right pipeline.
 @_value modified instead of return val.
 	
 Monad: Encapsulates computations as a sequence of steps.
-*1) Wrap value within monad. Wrap == 'return' (Haskell)
-*2) Bind applies function on wrapped value and returns a monad
-*3) Unwrap/print/evaluate
+
+1. Wrap value within monad. Wrap == 'return' (Haskell)
+2. Bind applies function on wrapped value and returns a monad
+3. Unwrap/print/evaluate
 	
 ##12 Closed Maps
 "Classes" as Maps, like in JavaScript.
@@ -89,14 +88,14 @@ IO sequences called from main.
 Word frequency counter with stop words
 The program takes 1 argument, the text to scan.
 
-Run
+##Run
 	>> [Program] pride-and-prejudice.txt
 
-##Java
+###Java
 	>> javac Program.java
 	>> java  Program.class pride-and-prejudice.txt
 
-##Ruby
+###Ruby
 	>> ruby Program.rb pride-and-prejudice.txt
 
 
@@ -143,17 +142,18 @@ List of the top 25 most frequently occuring words in descending order.
 	good - 201
 
 ##List of Stop Words
-	Location: ../stop_words.txt  (in the parent directory)
+###Location
+	../stop_words.txt  (in the parent directory)
 	
-	stop_words.txt
-		a,able,about,across,after,all,almost,also,am,among,an,and,any,are,as,at,
-		be,because,been,but,by,can,cannot,could,dear,did,do,does,either,else,ever,
-		every,for,from,get,got,had,has,have,he,her,hers,him,his,how,however,i,if,
-		in,into,is,it,its,just,least,let,like,likely,may,me,might,most,must,my,
-		neither,no,nor,not,of,off,often,on,only,or,other,our,own,rather,said,say,
-		says,she,should,since,so,some,than,that,the,their,them,then,there,these,
-		they,this,tis,to,too,twas,us,wants,was,we,were,what,when,where,which,while,
-		who,whom,why,will,with,would,yet,you,your,
+###stop_words.txt
+	a,able,about,across,after,all,almost,also,am,among,an,and,any,are,as,at,
+	be,because,been,but,by,can,cannot,could,dear,did,do,does,either,else,ever,
+	every,for,from,get,got,had,has,have,he,her,hers,him,his,how,however,i,if,
+	in,into,is,it,its,just,least,let,like,likely,may,me,might,most,must,my,
+	neither,no,nor,not,of,off,often,on,only,or,other,our,own,rather,said,say,
+	says,she,should,since,so,some,than,that,the,their,them,then,there,these,
+	they,this,tis,to,too,twas,us,wants,was,we,were,what,when,where,which,while,
+	who,whom,why,will,with,would,yet,you,your,
 
 
 
