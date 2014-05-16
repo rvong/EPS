@@ -43,7 +43,8 @@ Returns self/instance that wraps the new result.
 Ends up being like left-to-right pipeline.  
 @_value modified instead of return val.
 	
->Monad: Encapsulates computations as a sequence of steps.
+Monad
+: Encapsulates computations as a sequence of steps.
 + Wrap value within monad. Wrap == 'return' (Haskell)
 + Bind applies function on wrapped value and returns a monad
 + Unwrap/print/evaluate
