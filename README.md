@@ -3,7 +3,9 @@
 
 #Task
 Conform to the specified style. See the style's constraints in the text.
+
 Efficiency (running time) is not (really) considered, for some reason.
+
 Implementations in Java and Ruby
 
 #Styles
@@ -21,26 +23,41 @@ Short and sweet (often not explicit).
 	
 ##7 Infinite Mirror
 Recursion. Induction: Base Case, N + 1.
+
 Concept: Tail recursion optimization/elimination.
+
 Tail call: Subroutine call that's the final action in a procedure.
+
 If the activation record (state) doesn't need to be preserved (pop followed by push)
+
 the compiler optimizes to reuse the activation record.
+
 Only one activation record is used, saves space + time.
+
 Stack frame doesn't grow (and overflow).
+
 May or may not be supported by the programming environment.
+
 *Python imterpreter doesn't support tail call elimination.
 	
 ##8 Kick Forward
 Continuous-passing. Often used with anonymous function (lambda expressions).
+
 The next function to be called is passed as an argument to the called function.
+
 Popular due to asynchronous programming (e.g. JavaScript), non-blocking calls.
 
 ##9 The One
 Use an identity monad.
+
 The constructor wraps the monad around a value.
+
 Bind function feeds value to next function.
+
 Returns self/instance that wraps the new result.
+
 Ends up being like left-to-right pipeline.
+
 @_value modified instead of return val.
 	
 Monad: Encapsulates computations as a sequence of steps.
