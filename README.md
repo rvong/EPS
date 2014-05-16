@@ -1,34 +1,28 @@
 #Informatics 102
 
-> Book Title:  Exercises in Programming Style
-> Author: Crista Lopes
+>Book Title:  Exercises in Programming Style
+
+>Author: Crista Lopes
 
 #Task
-
 Conform to the specified style. See the style's constraints in the text.
 Efficiency (running time) is not (really) considered, for some reason.
 Implementations in Java and Ruby
 
 #Styles
-
 ##Freestyle
-
 Do it the way you like.
 
 ##4 Cookbook
-
 Shared state that's processed by a series of functions.
 	
 ##5 Pipeline
-
 Functional-style, return output = next input. No shared state.
 
 ##6 Code Golf
-
 Short and sweet (often not explicit).
 	
 ##7 Infinite Mirror
-
 Recursion. Induction: Base Case, N + 1.
 Concept: Tail recursion optimization/elimination.
 Tail call: Subroutine call that's the final action in a procedure.
@@ -40,7 +34,6 @@ May or may not be supported by the programming environment.
 *Python imterpreter doesn't support tail call elimination.
 	
 ##8 Kick Forward
-
 Continuous-passing. Often used with anonymous function (lambda expressions).
 The next function to be called is passed as an argument to the called function.
 Popular due to asynchronous programming (e.g. JavaScript), non-blocking calls.
