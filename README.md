@@ -93,7 +93,7 @@ IO sequences called from main.
 Word frequency counter with stop words  
 The program takes 1 argument, the text to scan.
 
-Run
+##Run
 	>> [Program] pride-and-prejudice.txt
 
 ##Java
