@@ -2,10 +2,8 @@
 *Exercises in Programming Style*
 
 #Task
-Conform to the specified style. See the style's constraints in the text.
-
-Efficiency (running time) is not (really) considered, for some reason.
-
+Conform to the specified style. See the style's constraints in the text.  
+Efficiency (running time) is not (really) considered, for some reason.  
 Implementations in Java and Ruby
 
 #Styles
@@ -22,87 +20,72 @@ Functional-style, return output = next input. No shared state.
 Short and sweet (often not explicit).
 	
 ##7 Infinite Mirror
-Recursion. Induction: Base Case, N + 1.
-
-Concept: Tail recursion optimization/elimination.
-
-Tail call: Subroutine call that's the final action in a procedure.
-
-If the activation record (state) doesn't need to be preserved (pop followed by push)
-
-the compiler optimizes to reuse the activation record.
-
-Only one activation record is used, saves space + time.
-
-Stack frame doesn't grow (and overflow).
-
-May or may not be supported by the programming environment.
-
+Recursion. Induction: Base Case, N + 1.  
+Concept: Tail recursion optimization/elimination.  
+Tail call: Subroutine call that's the final action in a procedure.  
+If the activation record (state) doesn't need to be preserved (pop followed by push)  
+the compiler optimizes to reuse the activation record.  
+Only one activation record is used, saves space + time.  
+Stack frame doesn't grow (and overflow).  
+May or may not be supported by the programming environment.  
 *Python imterpreter doesn't support tail call elimination.
-	
+
 ##8 Kick Forward
-Continuous-passing. Often used with anonymous function (lambda expressions).
-
-The next function to be called is passed as an argument to the called function.
-
-Popular due to asynchronous programming (e.g. JavaScript), non-blocking calls.
+Continuous-passing. Often used with anonymous function (lambda expressions).  
+The next function to be called is passed as an argument to the called function.  
+Popular due to asynchronous programming (e.g. JavaScript), non-blocking calls.  
 
 ##9 The One
-Use an identity monad.
+Use an identity monad.  
+The constructor wraps the monad around a value.  
+Bind function feeds value to next function.  
+Returns self/instance that wraps the new result.  
+Ends up being like left-to-right pipeline.  
+@_value modified instead of return val.  
 
-The constructor wraps the monad around a value.
-
-Bind function feeds value to next function.
-
-Returns self/instance that wraps the new result.
-
-Ends up being like left-to-right pipeline.
-
-@_value modified instead of return val.
-	
 Monad: Encapsulates computations as a sequence of steps.
 
 1. Wrap value within monad. Wrap == 'return' (Haskell)
 2. Bind applies function on wrapped value and returns a monad
 3. Unwrap/print/evaluate
-	
+
 ##12 Closed Maps
 "Classes" as Maps, like in JavaScript.
 
 ##15 Bulletin Board (Publish/Subscribe)
-Process via message passing with Pub/Sub model. No direct calls.
-Publish and subscribe to events posted to the "bulletin board."
-Events are pairs of event types and handlers.
-Event type 	= The name.
-Handlers 	= The method to be called by the subscribers.
-Bulletin board is the event manager, it's the infrastructure that
+Process via message passing with Pub/Sub model. No direct calls.  
+Publish and subscribe to events posted to the "bulletin board."  
+Events are pairs of event types and handlers.  
+Event type 	= The name.  
+Handlers 	= The method to be called by the subscribers.  
+Bulletin board is the event manager, it's the infrastructure that  
 performs event management and distribution.
 
 ##16 Introspective
-Use information about self.
+Use information about self.  
 (local stack vars)
 	
 ##19 Plugins
-Pluggable/modular capabilities.
-Call subroutines available in compiled binaries.
-Dynamic loading of packages.
-Use of configuration files to specify code to be
+Pluggable/modular capabilities.  
+Call subroutines available in compiled binaries.  
+Dynamic loading of packages.  
+Use of configuration files to specify code to be  
 loaded at runtime.
 
 ##23 Declared Intentions
 Type enforcement.
-Procedures/functions declare the types of the parameters.
-Type errors raised if caller sends arguments with incompatible types.
-(Add this to dynamically-typed languages (Python, Ruby))
+Procedures/functions declare the types of the parameters.  
+Type errors raised if caller sends arguments with incompatible types.  
+(Add this to dynamically-typed languages (Python, Ruby))  
 *This is standard in Java for arguments and return values.
 	
 ##24 Quarantine
-No side effects of any kind, including IO.
-IO actions contained separately from pure functions.
+No side effects of any kind, including IO.  
+IO actions contained separately from pure functions.  
 IO sequences called from main.
 
 #Demonstration Program
-Word frequency counter with stop words
+Word frequency counter with stop words  
 The program takes 1 argument, the text to scan.
 
 ##Run
@@ -117,8 +100,8 @@ The program takes 1 argument, the text to scan.
 
 
 ##Input
-A text file containing the text to be scanned.
-In our case, the text of the book Pride and Prejudice
+A text file containing the text to be scanned.  
+In our case, the text of the book Pride and Prejudice  
 provided in pride-and-prejudice.txt.
 
 ##Output
