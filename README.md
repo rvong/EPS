@@ -44,10 +44,10 @@ Ends up being like left-to-right pipeline.
 @_value modified instead of return val.
 	
 >Monad: Encapsulates computations as a sequence of steps.
->>1. Wrap value within monad. Wrap == 'return' (Haskell)
-2. Bind applies function on wrapped value and returns a monad
-3. Unwrap/print/evaluate
-	
++ Wrap value within monad. Wrap == 'return' (Haskell)
++ Bind applies function on wrapped value and returns a monad
++ Unwrap/print/evaluate
+
 ##12 Closed Maps
 "Classes" as Maps, like in JavaScript.
 
