@@ -1,15 +1,17 @@
-Informatics 102
-=====================
-Title:  Exercises in Programming Style
+#Informatics 102
+
+Book Title:  Exercises in Programming Style
+
 Author: Crista Lopes
 
 Task
+
 	Conform to the specified style. See the style's constraints in the text.
 	Efficiency (running time) is not (really) considered, for some reason.
 	Implementations in Java and Ruby
 
 Styles
-Freestyle:
+Freestyle
 	Do it the way you like.
 
 4 Cookbook
