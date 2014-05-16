@@ -1,7 +1,6 @@
 #Informatics 102
 
 >Book Title:  Exercises in Programming Style
-
 >Author: Crista Lopes
 
 #Task
