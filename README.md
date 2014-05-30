@@ -89,11 +89,41 @@ No side effects of any kind, including IO.
 IO actions contained separately from pure functions.  
 IO sequences called from main.
 
+##25 Persistent Tables
+Data exists outside of execution program and often used by  
+many different programs. Data is stored so it's easier to explore.  
+Modeled as domains or types of data. Relations exist between  
+application data and domains identified.  
+Solve the problem by querying over data.  
+(Use SQLite)
+
+##27 LazyRivers
+Data comes in streams/chunks instead of whole.  
+Functions transform data stream to another kind of data stream. 
+Data is processed on need basis.  
+(Generators/Enumerators (Iterators + Bookkeeping, for partial results))
+
+##28 Actors
+Large problem decomposed into things.  
+Things have message queues to receive data.  
+Each thing has its own indepedent execution thread.  
+
+##29 Dataspaces
+One or more units execute concurrently.  
+One or more data spaces where the concurrent  
+units store/retrieve data.  
+No direct data exchange between concurrent units.  
+Data exchange only occurs using the one or more data spaces.
+
+#31 Double Map Reduce
+
+
 #Demonstration Program
 Word frequency counter with stop words  
 The program takes 1 argument, the text to scan.
 
-##Run
+##
+Run
 	>> [Program] pride-and-prejudice.txt
 
 ##Java
@@ -113,10 +143,10 @@ provided in pride-and-prejudice.txt.
 List of the top 25 most frequently occuring words in descending order.
 
 ##Format
-	[word 1] - [count]
-	[word 2] - [count]
-	[word 3] - [count]
-	[word 4] - [count]
+	[word 1] - [count 1]
+	[word 2] - [count 2]
+	[word 3] - [count 3]
+	[word 4] - [count 4]
 	...
 
 ##Correct output for pride-and-prejudice.txt
