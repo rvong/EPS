@@ -115,8 +115,26 @@ units store/retrieve data.
 No direct data exchange between concurrent units.  
 Data exchange only occurs using the one or more data spaces.
 
-#31 Double Map Reduce
+##30 Map Reduce
+Divide input into pieces.  
+Apply Map function to each piece, potentially in parallel.  
+Reduce function takes result from workers and recombines  
+into coherant output (merge).  
+Programming model rooted in LISP, APL
 
+##31 Double Map Reduce
+Like MapReduce  
+Purpose: Do the job in parallel by grouping.  
+Often data structures can be transformed for parallel processing.  
+Data grouped under some criteria for processing.
+Model: Google MapReduce, Hadoop
+
+##32 Model-View-Controller
+Model - Data models and rules that apply to the data.  
+View - Presents visual representation of model. Formats data for user.  
+Controller - Communication link between Model and View. Receive input,  
+change the model, decide action to be performed (present view).  The coordinator.  
+No overlap of responsibilities
 
 #Demonstration Program
 Word frequency counter with stop words  
