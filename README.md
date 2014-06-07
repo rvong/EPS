@@ -97,7 +97,7 @@ application data and domains identified.
 Solve the problem by querying over data.  
 (Use SQLite)
 
-##27 LazyRivers
+##27 Lazy Rivers
 Data comes in streams/chunks instead of whole.  
 Functions transform data stream to another kind of data stream. 
 Data is processed on need basis.  
