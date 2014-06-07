@@ -10,39 +10,39 @@ class WordFrequencyModel
   end
   
   def update(path)
-    self.new_file(path)
+    new_file(path)
     @pos, @pos_max = 0, @non_stop.size - 1
     self.count if !done    # new_file sets done if exception
   end
   
-  def new_file(path)
-    begin
-      @done = false
-      @h = Hash.new(0)
-      @words = File.read(path).downcase.scan(/[a-z]{2,}/)
-      @non_stop = @words.reject{|w| @@s.include? w}
-    rescue => err
-      @done = true
-      puts "Exception: #{err}"
-      err
-    end
-  end
-  
   def count
     b = calc_end(@pos)
-    #(@pos..b).each {|i| puts "#{i+1} #{@non_stop[i]}"} # debug/testing
     (@pos..b).each {|i| @h[@non_stop[i]] += 1}
     @pos += $limit
   end
-  
-  def calc_end(a)
-    b = a + $limit - 1
-    if b > @pos_max   # if we go past end set @pos to the end, and set done
-      b = @pos_max
-      @done = true
+    
+  private
+    def new_file(path)
+      begin
+        @done = false
+        @h = Hash.new(0)
+        @words = File.read(path).downcase.scan(/[a-z]{2,}/)
+        @non_stop = @words.reject{|w| @@s.include? w}
+      rescue => err
+        @done = true
+        puts "Exception: #{err}"
+        err
+      end
     end
-    return b
-  end
+
+    def calc_end(a)
+      b = a + $limit - 1
+      if b > @pos_max   # if we go past end set @pos to the end, and set done
+        b = @pos_max
+        @done = true
+      end
+      return b
+    end
 end
 
 class WordFrequencyView
@@ -61,10 +61,6 @@ class WordFrequencyController
     @model, @view = model, view
   end
 
-  def freq(path)
-    @model.update(path)
-  end
-  
   def run
     while true
       @view.render
@@ -91,10 +87,11 @@ class WordFrequencyController
     end
   end
   
-  def get_input
-    STDOUT.flush
-    STDIN.gets.chomp
-  end
+  private
+    def get_input
+      STDOUT.flush
+      STDIN.gets.chomp
+    end
 end
 
 m = WordFrequencyModel.new(ARGV.first)  # data
